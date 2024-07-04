@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="full-page">
+
+  <table>
+    <tr>
+      <td  colspan="3" style=" background-color:rgba(124, 81, 67, 0.6)">
+          <header>
+              <nav>
+                <ul class="menu">
+                  <li><a href="MainPage.html">Main page </a></li>
+                  <li><a href="MainPage.html">About Training</a></li>
+   
+                  <div class="dropdown">
+                    <button class="dropbtn">Training tasks</button>
+                    <div class="dropdown-content">
+
+                      
+                      <a href="To-Do List.html">Task1-To-Do List</a>
+                      <a href="calc.html">Task2-Calculator</a>
+                      <a href="quiz.html">Task3-Quiz</a>
+                      <a href="QuizFitch.html">Task4-QuizFitch</a>
+                    </div>
+                  </div>
+                </ul>
+              </nav>
+            </header>
+        
+      </td>
+  </tr>
+
+      <tr>
+        <td colspan="3" class="MP">
+
+        <div class="calculator">
+
+            <form>
+                <div class="display">
+                    <input type="text" name="display" readonly>
+                </div>
+                
+                <div>
+                    <input type="button" value="AC" onclick="display.value ='' " id="gray">
+                    <input type="button" value="7" onclick="display.value +='7' ">
+                    <input type="button" value="4" onclick="display.value +='4' ">
+                    <input type="button" value="1" onclick="display.value +='1' ">
+                    <input type="button" value="00" onclick="display.value +='00' ">
+                    
+                </div>
+                <div>
+                    <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)" id="gray">
+                    <input type="button" value="8" onclick="display.value +='8' ">
+                    <input type="button" value="5" onclick="display.value +='5' ">
+                    <input type="button" value="2" onclick="display.value +='2' ">
+                    <input type="button" value="0" onclick="display.value +='0' ">
+                </div>
+                <div>
+                    <input type="button" value="." onclick="display.value +='.' " id="gray">
+                    <input type="button" value="9" onclick="display.value +='9' ">
+                    <input type="button" value="6" onclick="display.value +='6' ">
+                    <input type="button" value="3" onclick="display.value +='3' ">
+                    <input type="button" value="=" onclick="display.value = eval(display.value)">
+                </div>
+                <div id="orange">
+                    <input type="button" value="/" onclick="display.value +='/' ">
+                    <input type="button" value="*" onclick="display.value +='*' ">
+                    <input type="button" value="-" onclick="display.value +='-' ">
+                    <input type="button" value="+" onclick="display.value +='+' ">
+                    <input type="button" value="%" onclick="display.value = calculatePercentage(display.value)">
+                    
+                </div>
+                </div>
+            </form>
+        </div>
+
+        </td>
+      </tr>
+    </table><!--تقفيلة الجدول-->
+
+    <script>
+      function calculatePercentage(value) {
+          var num = parseFloat(value);
+          if (!isNaN(num)) {
+              return num / 100;
+          }
+          return value;
+      }
+  </script>
+    
+</body>
+</html>

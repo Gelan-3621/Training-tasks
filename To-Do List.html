@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Gelan Bageis /1907083</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
+
+
+<body class="full-page">
+
+  <table>
+    <tr>
+      <td  colspan="3" style=" background-color:rgba(124, 81, 67, 0.6)">
+          <header>
+              <nav>
+                <ul class="menu">
+                  <li><a href="MainPage.html">Main page </a></li>
+                  <li><a href="MainPage.html">About Training</a></li>
+   
+                  <div class="dropdown">
+                    <button class="dropbtn">Training tasks</button>
+                    <div class="dropdown-content">
+
+                      
+                      <a href="To-Do List.html">Task1-To-Do List</a>
+                      <a href="calc.html">Task2-Calculator</a>
+                      <a href="quiz.html">Task3-Quiz</a>
+                      <a href="QuizFitch.html">Task4-QuizFitch</a>
+                    </div>
+                  </div>
+                </ul>
+              </nav>
+            </header>
+        
+      </td>
+  </tr>
+
+  <tr  class="ToDo">
+    <td>
+
+      <div class="app">
+
+        <form>
+    
+          <label for="task">New task:</label>
+          <input type="text" id="task" name="task" placeholder="Enter task">
+          <button type="button" onclick="addTask()">Add</button>
+          <button type="button" onclick="deleteAllTasks()" class="delete-all-btn"><i class="fas fa-trash"></i> Delete All</button>
+        </form>
+
+        <p id="task-list"></p>
+      </div>
+    <script src="Jscript.js"></script>
+  
+  </td>
+  </tr>
+  </table>
+</body>
+</html>

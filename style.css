@@ -1,0 +1,291 @@
+
+  /* من هنا بداية هبد التزيين والجدول*/
+
+  .full-page {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(bac4.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat; /* لمنع تكرار الصورة */
+    background-position: center center; /* لوضع الصورة في وسط الشاشة */
+    background-attachment: fixed; /* لجعل الخلفية ثابتة أثناء التمرير */
+    
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  } /* ههنا كود ستايل الجدول  */
+
+  td {
+    padding: 10px;
+    border: 0px solid rgb(16, 1, 1);/* هنا تنسيق حجم ولون البوردير تبع الجدول */
+  }
+
+   h1 {
+    text-shadow: 2px 2px 4px #000000;/* تنسيق ستايل الشادوا */
+  }
+  
+  
+/* Class Selector */
+/* هنا تنسيقات المنيوا*/
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.menu li a {
+  color: #000000;/*لون الكلام الي في الهيدر */
+  text-decoration: none;  /* هنا اخترنا ان الخط ما يكون له ديزاين*/
+
+  padding: 10px;
+}
+
+.menu li a:hover {
+  background-color: #9f8a73;/* لون الخلفية لمن يجي عليه الماوس*/
+  padding: 16px;
+}
+
+/* هنا بداية تنسيق الدروب داون */
+
+.dropbtn {
+  background-color:rgba(219, 67, 16, 0);
+  color: rgb(10, 0, 0);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}/* تنسيق لون الباك قراوند والسايز وكذا  */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1; /*هذا يحدد لون  الجدول الي في الدروب داون*/
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /*هذا يعطي تأثير الشادو تحت القائمة المنسدلة*/
+
+
+  z-index: 1;/* هنا اهم نقطة اننا طبقنا الزيد انديكس */
+
+
+}/* هنا تنسيقات القائمة المنسدلة يعني لونها ومقاساتها وكذا */
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;} /*لون القائمة المنسدلة بعد التأشير عليها بالماوس*/
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #9f8a73;}
+
+/*TO-DOتنسيق جزئية ال*/
+.task {
+    margin-bottom: 10px;
+  }
+  .task input[type="checkbox"] {
+    margin-right: 10px;/*المسافة الي بين التشيك بوكس و الكلام*/
+
+  
+  }
+  .task.completed {
+    text-decoration: line-through;
+    color: #558657;
+  }
+  .delete-btn {
+    margin-left: 5px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    border: none;
+    
+    padding: 1px 1px;  /* تحدد حجم مربع الحذف نفسه <---- مسافة داخلية 2 بكسل عموديًا و3 بكسل أفقيًا */
+    cursor: pointer; /* يجعل المؤشر يظهر كيد عند التحويم */
+  }
+
+  .delete-btn:hover {  /* يحدد تأثير التحويم على الزر*/
+    background-color: darkred;
+    color: rgb(11, 11, 11);/* هذي ما تشتغل لان انا حاطة صورة وهي تغير الكلام*/
+  }
+
+  .edit-btn{
+    color: #000000;
+    margin-right: 3px;/*هنا نتحكم بالمسافة بين البوتوم حق التعديل و الحذف*/
+    margin-left: 10px;/*هنا نتحكم بالمسافة بين الكلام و البوتوم حق التعديل*/
+  }
+  .delete-icon {
+    width: 15px; /* تغيير العرض */
+    height: 15px; /* تغيير الارتفاع */
+
+  }
+  .ToDo{  /*يخلي الليست في النص*/
+
+    align-items: center;
+    display: flex;
+    justify-content:center;
+  }
+  /*TO-DOنهاية جزئية ال*/
+
+
+/*Mian Pageتنسيق الكلام داخل صفحة ال*/
+
+.MP{
+
+  align-items: center;
+  display: flex;
+  justify-content:center;
+}
+
+
+
+
+/*جزئية كود الحاسبة*/
+
+
+.calculator { /*المربع الأساسي للألة*/
+  background: #2c2926;
+  padding: 20px;
+  border-radius: 10px;
+  background-position: center center;
+}
+
+.calculator form { /*؟؟؟؟؟؟؟*/
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px; /* مسافة بين الأعمدة */
+  row-gap: 10px; /* (ما تشتغل!!!!!!!!!!!!)مسافة بين الصفوف */
+  
+}
+
+.calculator form .display { /*تنسيق خانة ظهور النتيجة*/
+  grid-column: span 4;
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+}
+
+.calculator form .display input { /*تنسيق المحتوى داخل خانة ظهور النتيجة*/ 
+  width: 100%;
+  height: 60px;
+  text-align: right;/*بعد الكتابة تكون الارقام على اليمين*/
+  font-size: 24px;/*حجم الخط الظاهر بعد الكتابة*/
+  padding: 10px; /*المساحة الداخلية بين الكتابة و الحدود عكس الميرج تعمل مساحة خارجية*/
+  border-radius: 10px; /*هذي الي تعملي الزاوية المايلة*/
+  border: none;/*مافي حدود*/
+  outline: none;
+  box-shadow: -4px -4px 5px rgba(73, 65, 65, 0.1), 5px 5px 1px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  color: #ffffff; /*لون الأرقام الي راح تطلع في الألة */
+  margin-bottom: 20px; /* يفترض تعملي مسافة بين الأزرار لكن مو قاعدة تشتغل*/
+}
+
+.calculator form input[type="button"] { /*تنسيق ازارير الحاسبة*/
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  box-shadow: -4px -4px 5px rgba(73, 65, 65, 0.1), 3px 3px 1px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  font-size: 20px;
+  color: #ffffff; /*لون الأرقام*/
+  cursor: pointer;
+  border: none; /*(تشمل مساحة زايدة)الحدود*/
+  /*outline: 2px solid black;/*(ما تشمل مساحة زايدة)الحدود*/
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 100px;
+}
+
+#gray{
+
+background-color: #696765;
+}
+#orange input[type="button"]{
+
+background-color: #e07618; 
+}
+#orange{/*هنا عشان نعمل مسافة بين الخانات في اخر صف*/
+display: grid;
+gap: 3px;
+}
+/*نهاية جزئية الحاسبة*/
+
+/*جزئية الكويز*/
+
+
+.app {/*TO-DOالمربع الأساسي للحاسبة و ال*/
+  background:rgba(124, 81, 67, 0.6);
+  width: 90%;
+  max-width: 600px;
+  margin: 100px auto 0;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.app h1 {
+  font-size: 25px;
+  color: #e5e1de;
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+  padding-bottom: 30px;
+  /*الثلاثة الي تحت مع بعض يخلون الشيء في النص*/
+  align-items: center;
+  display: flex;
+  justify-content:center;
+}
+
+.quiz h2 {
+  font-size: 18px;
+  color: #35170a;
+  font-weight: 600;
+}
+
+.btn { /* تنسيق الاجوبة */
+  background: #e5e1deb8;;
+  color: #222;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid #222;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #222;
+  color: #ffffff;
+}
+
+.correct {
+  background: #13eb49cd;
+}
+
+.incorrect {
+  background: #ea221bbd;
+}
+#next-btn{
+  background: #f1eeeebd; 
+  padding: 10px;
+  font-size: 15px;
+}
+
+/*نهاية جزئية الكويز*/
